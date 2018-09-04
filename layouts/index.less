@@ -1,0 +1,130 @@
+html body{
+    background-color: #f0f2f5;
+}
+.mainLayout{
+    :global{
+       
+    }
+    :global .main-content{
+        height:100%;
+        background-color: #f0f2f5;
+    }
+    :global .bread-bar{
+        padding:.6rem 1rem;
+        background-color: #fff;
+        border-bottom:1px solid #eee;
+    }
+
+    :global .content-wrap{
+       margin-left: 200px;
+    }
+
+    :global .sider-nav{
+        position: absolute;
+        height: calc(~"100% - 105px");
+    }
+}
+
+.header{
+    background-color: @primary-color;
+    :global .logo{
+        color:#fff;
+        font-size: 1.5rem;
+        span{
+            margin-left: 10px;
+        }
+    }
+    :global .user{
+        a{
+            color:#fff;
+        }
+    }
+    :global .menu-nav{
+        padding: 21px 0;
+        background-color: transparent;
+        border:none;
+        line-height: 1rem;
+        li{
+            padding:8px 20px;
+            color:#fff;
+            box-sizing: border-box;
+        }
+        .ant-menu-item,.ant-menu-submenu{
+            top: -3px;
+        }
+        .ant-menu-item-selected,.ant-menu-submenu-selected {
+            border-color: #fff;
+            border-bottom: 4px solid #fff;
+        }
+        li.ant-menu-item,li.ant-menu-item.ant-menu-item-active{
+            a{
+                color: #fff;
+            }
+        }
+        .ant-menu-item.ant-menu-item-active,.ant-menu-submenu.ant-menu-submenu-active,.ant-menu-submenu.ant-menu-submenu:hover{
+            color: #fff;
+            border-bottom: 4px solid #fff;
+            .ant-menu-submenu-title{
+                color: #fff;
+            }
+        }
+    
+    }
+}
+
+.tabbar{
+    :global ul{
+        padding: 0 1rem;
+        padding-top: .9rem;
+        overflow: hidden;
+        background-color: #fff;
+        li{
+            float: left;
+            position: relative;
+            margin-right: 5px;
+            list-style-type: none;
+            background-color: #d8d8d8;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            &:hover{
+                .close-icon{
+                    display: block;
+                }
+            }
+            .close-icon{
+                display: none;
+                background-color: #fff;
+                position: absolute;
+                border-radius: 50px;
+                top: -2px;
+                right: -1px;
+                font-size: 1rem;
+                cursor: pointer;
+                color:#f33633;
+                transition:all .2s ease;
+            }
+            a{
+                display: block;
+                text-align: center;
+                padding:5px 20px;
+                color:#666;
+                &:focus{
+                    text-decoration: none;
+                }
+            }
+            &.active-tab{
+                background-color:#1890ff;
+                a{
+                    color:#fff;
+                }
+            }
+            animation:move .2s ease-in 1;
+        }
+    }
+}
+
+@keyframes move
+{
+    from {top:-40px;}
+    to {top:0px;}
+}
