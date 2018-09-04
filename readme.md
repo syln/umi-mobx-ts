@@ -27,6 +27,6 @@ umi build
 
 ### TODO
 
--[ ]axios封装（请求拦截，状态码处理）
+- [ ] axios封装（请求拦截，状态码处理）
 
 - [x] mobx整合
